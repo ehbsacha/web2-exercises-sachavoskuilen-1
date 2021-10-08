@@ -15,11 +15,17 @@
     flex-direction: column;
     border: 1px solid black;
     margin: 20px;
+    width: 160px;
 }
 
 .pokeblock img {
     height: 150px;
     width: 150px;
+}
+
+.pokeblock .name {
+    font-size: larger;
+    color: red;
 }
 
 button {
