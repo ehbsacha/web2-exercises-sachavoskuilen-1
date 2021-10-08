@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+}
+
+#pokemon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px 15%;
+}
+
+.pokeblock {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.pokeblock img {
+    height: 150px;
+    width: 150px;
+}
+
+button {
+    background-color: rgb(255, 174, 0);
+    width: 100%;
+    padding-bottom: 0;
+}
