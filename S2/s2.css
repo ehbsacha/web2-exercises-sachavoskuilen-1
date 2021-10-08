@@ -2,6 +2,13 @@
     margin: 0;
 }
 
+#team {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-size: 25px;
+}
+
 #pokemon {
     display: flex;
     flex-direction: row;
@@ -13,7 +20,7 @@
     width: auto;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    align-items: center;
     margin: 20px;
     width: 160px;
 }
@@ -25,11 +32,16 @@
 
 .pokeblock .name {
     font-size: larger;
-    color: red;
 }
 
-button {
-    background-color: rgb(255, 174, 0);
+a {
     width: 100%;
-    padding-bottom: 0;
+    color: red;
+    text-align: center;
+}
+
+.teamName,
+.trainerName {
+    color: darkorange;
+    padding: 0 5px;
 }

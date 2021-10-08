@@ -41,22 +41,23 @@ window.onload = function(){
                 <img src="${p.sprites.front_shiny}" alt="pokemon">
                 <p class="name">${p.name}</p>
                 <p class="types">Elements: ${p.types.length}</p>
-                <button id="${p.id}">Add to team</button>
+                <a href="" id="${p.id}" class= "btn">Add to team</a>
             </div>`
         }
-        console.log(pokemon);
         document.getElementById('pokemon').innerHTML = html;
 
         //Add event listeners to all the buttons
         document.querySelectorAll('.btn').forEach(item => {
             item.addEventListener('click', event => {
+                event.preventDefault();
                 //Get the id of the clicked item
                 let id = event.target.id;
                 // Two ways of retrieving the correct pokemon data
                 // 1. Make a new fetch call
                 // 2. search for the pokemon in the array
-
-
+                team1.roster.push(list[id-1].name);
+                console.log(team1.roster);
+                refreshTeam();
 
             });
         });

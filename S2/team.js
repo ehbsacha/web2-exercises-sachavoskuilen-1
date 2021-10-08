@@ -1,13 +1,13 @@
 export default class Team {
     constructor(){
-        this.teamName = 'Kanto';
-        this.trainer = 'Ash';
-        this.roster = ['Bulbasaur'];
+        this.teamName = 'Fat boiiii';
+        this.trainer = 'You';
+        this.roster = [];
     }
 
     describe(){
-        return `Team ${this.teamName} with trainer ${this.trainer}
-        has the following pokemon: ${[...this.roster]}`;
+        return `Team<p class="teamName"> ${this.teamName} </p> with <p class="trainerName"> ${this.trainer} </p> as trainer 
+        has the following pokemon: ${[...this.roster] }`;
     }
 
 }
