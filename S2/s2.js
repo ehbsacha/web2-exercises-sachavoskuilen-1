@@ -40,7 +40,9 @@ window.onload = function(){
             <div class="pokeblock">
                 <img src="${p.sprites.front_shiny}" alt="pokemon">
                 <p class="name">${p.name}</p>
-                <p class="types">Elements: ${p.types.length}</p>
+                <p class="types">${p.types.map((type => {
+                    return ` ${type.type.name}`
+                }))}</p>
                 <a href="" id="${p.id}" class= "btn">Add to team</a>
             </div>`
         }
