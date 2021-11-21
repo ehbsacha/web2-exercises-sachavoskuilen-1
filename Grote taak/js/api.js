@@ -4,7 +4,7 @@ const apiKey = "client_id=5UGynejyAW";
 var games = [];
 
 window.onload = function(){
-    fetchData(`https://api.boardgameatlas.com/api/search?order_by=rank&ascending=false&${apiKey}`);
+    fetchData(`https://api.boardgameatlas.com/api/search?order_by=rank&limit=100&ascending=false&${apiKey}`);
     
 }
 
