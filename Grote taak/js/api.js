@@ -4,7 +4,7 @@ const apiKey = "client_id=5UGynejyAW";
 var games = [];
 
 window.onload = function(){
-    fetchData(`https://api.boardgameatlas.com/api/search?order_by=rank&limit=100&ascending=false&${apiKey}`);
+    fetchData(`https://api.boardgameatlas.com/api/search?order_by=rank&limit=10&ascending=false&${apiKey}`);
     
 }
 
@@ -20,9 +20,9 @@ async function fetchData(someUrl){
 
 function buildList(){
   // Order the list, now its ordered on the user rating
-  games.sort(function(a,b) {
-      return b.average_user_rating - a.average_user_rating;
-  });
+  // games.sort(function(a,b) {
+  //     return b.average_user_rating - a.average_user_rating;
+  // });
 
   //Change the innerHTML of the page
   let html = '';
@@ -51,4 +51,5 @@ function buildList(){
 
   }
   document.getElementById('games').innerHTML = html;
+  document.getElementById('games2').innerHTML = html;
 }
