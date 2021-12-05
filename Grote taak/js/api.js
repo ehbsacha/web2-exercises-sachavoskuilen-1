@@ -4,8 +4,8 @@ const apiKey = "client_id=5UGynejyAW";
 var games = [];
 
 window.onload = function(){
-    fetchData(`https://api.boardgameatlas.com/api/search?order_by=user_rating&limit=10&ascending=false&${apiKey}`);
-    
+    fetchData(`https://api.boardgameatlas.com/api/search?order_by=rank&limit=10&ascending=false&${apiKey}`);
+   
 }
 
 async function fetchData(someUrl){
@@ -30,11 +30,26 @@ function buildList(){
   for(let game of games){
       html += `
       <div class="game">
-        <img src=${game.image_url} alt="Scythe">
-        <p class="name">${game.rank}</p>
-        <p class="rating">User rating: ${Math.round(game.average_user_rating * 100) / 100}</p>
-        <p class="complexity">learning: ${Math.round(game.average_learning_complexity * 100) / 100}</p>
+        <p class="name">${game.handle}</p>
+        <div class="data">
+          <p class="rating">1</p>
+          <div class="buttons">
+            <button class="shelf">s</button>
+            <button class="wishlist">w</button>
+          </div>
+          <img src="${game.image_url}" alt="Scythe">
+          <div class="bottomBar">
+            <p class="players">${game.min_players}-${game.max_players}</p>
+            <p class="duration">${game.min_playtime}-${game.max_playtime}</p>
+            <p class="age">${game.min_age}+</p>
+          </div>
+        </div>
       </div>`;
+
+    // The calculation to round to the right numbers
+    // ${Math.round(game.average_learning_complexity * 100) / 100}
+
   }
   document.getElementById('games').innerHTML = html;
+  document.getElementById('games2').innerHTML = html;
 }
