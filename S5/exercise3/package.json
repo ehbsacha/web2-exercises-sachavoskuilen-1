@@ -1,0 +1,18 @@
+{
+  "name": "exercise3",
+  "version": "1.0.0",
+  "description": "Exercise part 3 of our 5 course",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sacha Voskuilen",
+  "license": "ISC",
+  "keywords": [
+    "none"
+  ],
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
